@@ -1,18 +1,3 @@
-/*
- * Copyright 2012-2015 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 package sample.data.elasticsearch;
 
@@ -26,11 +11,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.test.OutputCapture;
 import org.springframework.core.NestedCheckedException;
 
-/**
- * Tests for {@link PeopleElasticsearchApplication}.
- *
- * @author Artur Konczak
- */
 public class SampleElasticsearchApplicationTests {
 
     private static final String[] PROPERTIES = {
@@ -43,7 +23,7 @@ public class SampleElasticsearchApplicationTests {
     @Test
     public void testDefaultSettings() throws Exception {
         try {
-            new SpringApplicationBuilder(PeopleElasticsearchApplication.class)
+            new SpringApplicationBuilder(PeopleIndexResultsApplication.class)
                    .properties(PROPERTIES)
                    .run();
         } catch (IllegalStateException ex) {
