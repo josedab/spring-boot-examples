@@ -33,6 +33,12 @@ public class AuthorController {
         return author;
     }
     
+
+    @RequestMapping("/author/find")
+    public List<Author> findByName(@RequestParam(value = "name", required = true) String name) {
+        return authorRepository.findByName(name);
+    }
+    
     @RequestMapping(value = "/author", method = RequestMethod.POST)
     public Author author(@RequestBody Author author) {
         return authorRepository.save(author);
