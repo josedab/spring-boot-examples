@@ -4,6 +4,7 @@ import javax.inject.Inject;
 
 import org.springframework.social.facebook.api.Checkin;
 import org.springframework.social.facebook.api.Facebook;
+import org.springframework.social.facebook.api.FacebookProfile;
 import org.springframework.social.facebook.api.Page;
 import org.springframework.social.facebook.api.PagedList;
 import org.springframework.social.facebook.api.Post;
@@ -29,9 +30,10 @@ public class HelloController {
             return "redirect:/connect/facebook";
         }
 
-        model.addAttribute(facebook.userOperations().getUserProfile());
-        PagedList<Checkin> homeFeed = facebook.placesOperations().getCheckins();
-        model.addAttribute("feed", homeFeed);
+        FacebookProfile facebookProfile = facebook.userOperations().getUserProfile();
+        model.addAttribute(facebookProfile);
+        //PagedList<Checkin> homeFeed = facebook.placesOperations().getCheckins();
+        //model.addAttribute("feed", homeFeed);
 
         return "hello";
     }

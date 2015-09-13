@@ -5,13 +5,10 @@
 	<body>
 		<h3>Hello, <span th:text="${facebookProfile.name}">Some User</span>!</h3>
 		
-		<h4>Here is your home feed:</h4>
-		<h3>Feed: <span th:text="${feed}">Some feed</span>!</h3>
-		<div th:each="post:${feed}">
-			<b th:text="${post.from.name}">from</b> wrote:
-			<p th:text="${post.message}">message text</p>
-			<img th:if="${post.picture}" th:src="${post.picture}"/>
-			<hr/>
-		</div>
+		<h4>Here is your information:</h4>
+		
+		<h5>Email: <span th:text="${facebookProfile.email}">Some email</span>!</h5>
+		<h5>Gender: <span th:text="${facebookProfile.gender}">Some gender</span>!</h5>
+		<h5>Username: <span th:text="${facebookProfile.username}">Some username</span>!</h5>
 	</body>
 </html>
