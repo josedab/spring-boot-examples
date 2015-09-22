@@ -1,8 +1,27 @@
 spring-boot-caching
 ===================
+# Getting Started
+
+## Prerequisites
+
+1. Oracle JDK 1.8 (tested on 1.8, compatible with 6)
+2. Maven 3.0.x
+
+## Running the application
+
+Checkout the codebase and download the dependencies:
+
+```
+$ git clone ...
+$ mvn clean install
+```
+Run the application 
+```
+mvn spring-boot:run
+``` 
 
 # Features
-- Use of cached data by spring
+- Use of cached data by spring. This project proposes examples for simulating slow services that will affect the performance of the program. Using cached data we increase the performance.
 
 ##Example
 Without cached data, a slow service that takes about 5 seconds to return the information
