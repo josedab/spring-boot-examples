@@ -1,4 +1,4 @@
-spring-boot-actuator
+spring-boot-web
 ===================
 
 # Getting Started
@@ -30,21 +30,8 @@ http://localhost:9000/hellorest/world/string
 http://localhost:9000/hellorest/world/message
 ```
 
-# Endpoints management
-Management features out of the box give by Spring actuator
-```
-http://localhost:9001/health
-http://localhost:9001/mappings
-http://localhost:9001/metrics
-```
-
 # Features
-- Changed port for production and management
-- Metrics exposure
-
-## Metrics exposure
-- Exposure of int metrics through `CounterService
-- Add aspect for metrics exposure through http://localhost:9001/metrics
-
+- Just marshalling and GET requests. Use case for a 2 min webapp showcase
+- For more interesting staff, see the other spring boot projects as they are based on this one
 
 
