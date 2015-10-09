@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.josedab</groupId>
-    <artifactId>spring-boot-kafka</artifactId>
+    <artifactId>spring-boot-kafka-producer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>spring-boot-kafka</name>
-    <description>Demo project for Spring Boot. Showcase for kafka use</description>
+    <name>spring-boot-kafka-producer</name>
+    <description>Demo project for Spring Boot. Showcase for producing content into Kafka</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
