@@ -1,4 +1,4 @@
-package demo;
+package org.josedab.kafka;
 
 import org.josedab.kafka.GreetingApplication;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = GreetingApplication.class)
 @WebAppConfiguration
-public class DemoApplicationTests {
+public class GreetingApplicationTests {
 
 	@Test
 	public void contextLoads() {
