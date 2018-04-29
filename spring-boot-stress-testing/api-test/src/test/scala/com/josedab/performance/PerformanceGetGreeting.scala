@@ -3,16 +3,21 @@ package com.josedab.performance
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
-class PerformanceSimulation extends Simulation {
+class PerformanceGetGreeting extends Simulation {
 
   val httpProtocol = http
     .baseURL("http://localhost:8080")
     .userAgentHeader("Gatling")
 
-  val scn = scenario("PerformanceSimulation")
-    .repeat(10) {
+  val scn = scenario("GET /greeting")
+    .repeat(100) {
       exec(http("GET /greeting").get("/greeting"))
     }
+
+  /*val scn2 = scenario("PerformanceSimulation without Atomic Integer")
+    .repeat(10) {
+      exec(http("GET /greetingWithoutCounter").get("/greetingWithoutCounter"))
+    }*/
 
   setUp(
     scn.inject(atOnceUsers(1000))
