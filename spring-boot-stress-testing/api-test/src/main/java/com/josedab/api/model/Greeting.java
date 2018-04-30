@@ -2,8 +2,11 @@ package com.josedab.api.model;
 
 public class Greeting {
 
-    private final long id;
-    private final String content;
+    private long id = -1;
+    private String content = "default";
+
+    public Greeting() {
+    }
 
     public Greeting(long id, String content) {
         this.id = id;
@@ -17,4 +20,5 @@ public class Greeting {
     public String getContent() {
         return content;
     }
+
 }
